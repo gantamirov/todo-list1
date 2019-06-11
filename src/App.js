@@ -38,7 +38,7 @@ class App extends Component {
 		const { items, filter } = this.props;
 		return (
 			<div className='todo-main'>
-				<h3>Список дел: { items.length }(выполненных:{ items.filter(item => (item.completed)).length }) </h3>
+				<h3>Список дел: </h3>
 				<AppBar position="static">
 					<Tabs value={ filter } onChange={ this.filterChange }>
 						<Tab label="Все" />

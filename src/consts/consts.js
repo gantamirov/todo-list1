@@ -1,5 +1,0 @@
-export const ADD_ITEM = 'ADD_ITEM';
-export const DELETE_ITEM = 'DELETE_ITEM';
-export const DELETE_COMPLETED = 'DELETE_COMPLETED';
-export const CHANGE_ITEM_STATUS = 'CHANGE_ITEM_STATUS';
-export const CHANGE_FILTER = 'CHANGE_FILTER'; 

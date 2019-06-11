@@ -31,7 +31,7 @@ class TodoList extends Component {
 					)): null}
 				</ul>
 				<div className='info'>
-					<a className='text'>Количество заданий в списке: { itemsCount }</a>
+					<div className='text'>Количество заданий в списке: { itemsCount }</div>
 					{removeButton ? <Button variant="contained" color="secondary" onClick={ this.removeComleted }>Очистить список выполненных </Button> : null}
 				</div>
 			</div>

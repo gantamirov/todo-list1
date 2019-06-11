@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import TodoList from '../components/todo-list';
-import { changeItemStatus, deleteItem, deleteCompleted } from '../consts/actions';
+import { bindActionCreators } from 'redux'
+import { actions} from '../actions/actions';
 import { getItemsCount, getRemoveButton, getFilterItems } from '../selectors/selector';
 
 const mapStateToProps = state => ({
@@ -8,5 +9,10 @@ const mapStateToProps = state => ({
 	removeButton: getRemoveButton(state),
 	items: getFilterItems(state)
 });
+const mapDispatchToProps = dispatch => bindActionCreators({
+	changeItemStatus: actions.changeItemStatus, 
+	deleteItem: actions.deleteItem, 
+	deleteCompleted: actions.deleteCompleted
+}, dispatch)
 
-export default connect(mapStateToProps, { changeItemStatus, deleteItem, deleteCompleted })(TodoList)
+export default connect(mapStateToProps, mapDispatchToProps)(TodoList)
